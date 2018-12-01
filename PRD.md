@@ -9,7 +9,7 @@
 * 领头的测试者：叶文敏
 
 ### 用户案例：
-将会议记录语音转为文本笔记，你的专属工作秘书。（短需求）
+* 将会议记录语音转为文本笔记，你的专属工作秘书。（短需求）
 ### 目标：
 * 知你小程序将会议上的音频转换为文字记录，节省人力和时间成本，具有云工作室功能，方便工作协作，具有任务进程打卡功能，工作进度一目了然，摆脱工作拖延症。
 
@@ -52,7 +52,7 @@
 ![img](https://github.com/Ye-Wen-Min/API_ML_AI/blob/master/img/%E6%B5%81%E7%A8%8B%E5%9B%BE%20(1).png)
 
 #### 产品信息结构图：
-![img](https://github.com/Ye-Wen-Min/API_ML_AI/blob/master/%E7%9F%A5%E4%BD%A0%E5%B0%8F%E7%A8%8B%E5%BA%8F%20%E4%BF%A1%E6%81%AF).png)
+![img](https://github.com/Ye-Wen-Min/API_ML_AI/blob/master/%E7%9F%A5%E4%BD%A0%E5%B0%8F%E7%A8%8B%E5%BA%8F%20%E4%BF%A1%E6%81%AF.png)
 
 
 ####  交互界面设计：
