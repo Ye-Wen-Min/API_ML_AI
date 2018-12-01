@@ -48,13 +48,12 @@
 #### 产品功能结构图：
 ![img](https://github.com/Ye-Wen-Min/API_ML_AI/blob/master/img/%E7%9F%A5%E4%BD%A0%E5%B0%8F%E7%A8%8B%E5%BA%8F.png)
 
+#### 产品流程图：
+![img](https://github.com/Ye-Wen-Min/API_ML_AI/blob/master/img/%E6%B5%81%E7%A8%8B%E5%9B%BE%20(1).png)
 
 #### 产品信息结构图：
 ![img](https://github.com/Ye-Wen-Min/API_ML_AI/blob/master/%E7%9F%A5%E4%BD%A0%E5%B0%8F%E7%A8%8B%E5%BA%8F%20%E4%BF%A1%E6%81%AF).png)
 
-
-#### 产品流程图：
-![img](https://github.com/Ye-Wen-Min/API_ML_AI/blob/master/img/%E6%B5%81%E7%A8%8B%E5%9B%BE%20(1).png)
 
 ####  交互界面设计：
 ![img](https://github.com/Ye-Wen-Min/API_ML_AI/blob/master/%E7%95%8C%E9%9D%A2/%E9%A6%96%E9%A1%B5%E6%8E%88%E6%9D%831.png)
