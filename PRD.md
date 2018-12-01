@@ -50,7 +50,7 @@
 
 
 #### 产品信息结构图：
-![img](https://github.com/Ye-Wen-Min/API_ML_AI/blob/master/img/%E7%9F%A5%E4%BD%A0%E5%B0%8F%E7%A8%8B%E5%BA%8F%20%E4%BF%A1%E6%81%AF).png)
+![img](https://github.com/Ye-Wen-Min/API_ML_AI/blob/master/%E7%9F%A5%E4%BD%A0%E5%B0%8F%E7%A8%8B%E5%BA%8F%20%E4%BF%A1%E6%81%AF).png)
 
 
 #### 产品流程图：
