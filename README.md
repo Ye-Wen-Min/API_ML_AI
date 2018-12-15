@@ -56,6 +56,10 @@
 
 
 ### 交互界面设计：
+
+##  [ 原型文档仓库URL](https://ye-wen-min.github.io/API_axure/index.html
+ )
+
 ![img](https://github.com/Ye-Wen-Min/API_ML_AI/blob/master/%E7%95%8C%E9%9D%A2/%E9%A6%96%E9%A1%B5%E6%8E%88%E6%9D%831.png)
 
 ### 首页授权界面
@@ -128,7 +132,5 @@
 * 明确需求：会议语音转换文本功能，面对的人群主要是处理日常商务工作上班一族，针对的场景是会议记录的现场，解决的问题是不用耗费大量时间在记录会议内容上。
 * 现有功能为：会议语音转换文本，运用百度语音识别API中长语音识别，通过SDK调用服务，可将长语音（长时间连续说话）转换为文字。
 
-##  [ 原型文档仓库URL](https://ye-wen-min.github.io/API_axure/index.html
- )
 
 
