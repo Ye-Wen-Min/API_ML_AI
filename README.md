@@ -123,14 +123,121 @@
 * （1）在开会时，面对繁多的会议内容，当场记录难度大，准确度低。
 * （2）在开会之后，对会议内容的后期记录工作量繁重，有时需要付出大量的时间才能完成。
 
-## 人工智能概率性与用户痛点
-
+### 人工智能概率性与用户痛点
+* 百度拟开放人工智能技术语音识别准确率达97%：
+[据悉，百度基于深度学习研发的新一代深度语音识别系统识别准确率可达到97%。](http://www.sohu.com/a/113334468_119536)
 * 知你小程序将会议上的音频实时转换为文字记录的这一功能调用了语音识别的API。在线识别转换为普通话、英文、粤语和四川话等语种，转化精确率较高，普遍情况下都可以使用。该产品因环境因素或者语音语调造成识别不准确的状况，转换概率较小为少数事件，对正面影响并不，基本能解决对会议内容等的实时记录的用户痛点。
 
 ## 需求列表与人工智能API加值（可行性）
 
 * 明确需求：会议语音转换文本功能，面对的人群主要是处理日常商务工作上班一族，针对的场景是会议记录的现场，解决的问题是不用耗费大量时间在记录会议内容上。
 * 现有功能为：会议语音转换文本，运用百度语音识别API中长语音识别，通过SDK调用服务，可将长语音（长时间连续说话）转换为文字。
+
+###  API运用
+#### 百度API
+* 百度AI的专业语音识别的API。其中语音识别及长语音识别SDK内部均为采用流式协议，即用户边说边处理。区别于Rest api需要上传整个录音文件。
+* 接口描述：向远程服务上传整段语音进行识别 ，输入音频文件，输出文本信息。
+* 接口地址以及SDK调用：
+* AipSpeech是语音识别的Python SDK客户端，为使用语音识别的开发人员提供了一系列的交互方法。
+参考如下代码新建一个AipSpeech：
+
+```
+from aip import AipSpeech
+
+""" 你的 APPID AK SK """
+APP_ID = '你的 App ID'
+API_KEY = '你的 Api Key'
+SECRET_KEY = '你的 Secret Key'
+
+client = AipSpeech(APP_ID, API_KEY, SECRET_KEY)
+
+```
+* 请求说明
+要对段保存有一段语音的语音文件进行识别：
+
+```
+# 读取文件
+def get_file_content(filePath):
+    with open(filePath, 'rb') as fp:
+        return fp.read()
+
+# 识别本地文件
+client.asr(get_file_content('audio.pcm'), 'pcm', 16000, {
+    'dev_pid': 1536,
+})
+```
+* dev_pid 参数列表：
+
+
+dev_pid | 语言
+---|---
+1536 | 普通话(支持简单的英文识别)
+1537 | 普通话(纯中文识别)
+1737 | 英语
+1637 | 粤语
+1837 | 四川话
+1936 | 普通话远场
+
+* 返回样例：
+```
+// 成功返回
+{
+    "err_no": 0,
+    "err_msg": "success.",
+    "corpus_no": "15984125203285346378",
+    "sn": "481D633F-73BA-726F-49EF-8659ACCC2F3D",
+    "result": ["北京天气"]
+}
+
+// 失败返回
+{
+    "err_no": 2000,
+    "err_msg": "data empty.",
+    "sn": null
+}
+
+```
+* 我们只需利用requests模块发送post请求到拼出来的url就可以了。
+
+```
+import requests
+
+#获取tokent
+baidu_server = "https://openapi.baidu.com/oauth/2.0/token?"
+grant_type = "client_credentials"
+#API Key
+client_id = "xxxx"
+#Secret Key
+client_secret = "xxxx" 
+
+#拼url
+url ="%sgrant_type=%s&client_id=%s&client_secret=%s"%(server,grant_type,client_id,client_secret)
+print(url)
+#获取token
+res = requests.post(url)
+print(res.text)
+token = json.loads(res.text)["access_token"]
+print(token)
+#24.b891f76f5d48c0b9587f72e43b726817.2592000.1524124117.282335-10958516import requests
+
+#获取tokent
+baidu_server = "https://openapi.baidu.com/oauth/2.0/token?"
+grant_type = "client_credentials"
+#API Key
+client_id = "qRHV7hrxj8vtAGuZOpG0zW58"
+#Secret Key
+client_secret = "Bg3Bmx3uPeCUnvuHxnS16HLnNiVPuPnz" 
+
+#拼url
+url ="%sgrant_type=%s&client_id=%s&client_secret=%s"%(server,grant_type,client_id,client_secret)
+print(url)
+#获取token
+res = requests.post(url)
+print(res.text)
+token = json.loads(res.text)["access_token"]
+print(token)
+#24.b891f76f5d48c0b9587f72e43b726817.2592000.1524124117.282335-10958516
+```
 
 
 
