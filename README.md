@@ -136,7 +136,7 @@
 * 现有功能为：会议语音转换文本，运用百度语音识别API中长语音识别，通过SDK调用服务，可将长语音（长时间连续说话）转换为文字。
 
 ##  API运用
-### 百度API
+### 百度API代码
  百度AI的专业语音识别的API。其中语音识别及长语音识别SDK内部均为采用流式协议，即用户边说边处理。区别于Rest api需要上传整个录音文件。
 ### 接口描述：
 向远程服务上传整段语音进行识别 ，输入音频文件，输出文本信息。
@@ -169,17 +169,6 @@ client.asr(get_file_content('audio.pcm'), 'pcm', 16000, {
     'dev_pid': 1536,
 })
 ```
-### dev_pid 参数列表：
-
-
-dev_pid | 语言
----|---
-1536 | 普通话(支持简单的英文识别)
-1537 | 普通话(纯中文识别)
-1737 | 英语
-1637 | 粤语
-1837 | 四川话
-1936 | 普通话远场
 
 * 返回样例：
 ```
@@ -200,65 +189,11 @@ dev_pid | 语言
 }
 
 ```
-* 我们只需利用requests模块发送post请求到拼出来的url就可以了。
-
-```
-import requests
-
-#获取tokent
-baidu_server = "https://openapi.baidu.com/oauth/2.0/token?"
-grant_type = "client_credentials"
-#API Key
-client_id = "xxxx"
-#Secret Key
-client_secret = "xxxx" 
-
-#拼url
-url ="%sgrant_type=%s&client_id=%s&client_secret=%s"%(server,grant_type,client_id,client_secret)
-print(url)
-#获取token
-res = requests.post(url)
-print(res.text)
-token = json.loads(res.text)["access_token"]
-print(token)
-#24.b891f76f5d48c0b9587f72e43b726817.2592000.1524124117.282335-10958516import requests
-
-#获取tokent
-baidu_server = "https://openapi.baidu.com/oauth/2.0/token?"
-grant_type = "client_credentials"
-#API Key
-client_id = "qRHV7hrxj8vtAGuZOpG0zW58"
-#Secret Key
-client_secret = "Bg3Bmx3uPeCUnvuHxnS16HLnNiVPuPnz" 
-
-#拼url
-url ="%sgrant_type=%s&client_id=%s&client_secret=%s"%(server,grant_type,client_id,client_secret)
-print(url)
-#获取token
-res = requests.post(url)
-print(res.text)
-token = json.loads(res.text)["access_token"]
-print(token)
-#24.b891f76f5d48c0b9587f72e43b726817.2592000.1524124117.282335-10958516
-```
-###  讯飞语音识别API
-语音转写（Long Form ASR）基于深度全序列卷积神经网络，将长段音频（5小时以内）数据转换成文本数据，为信息处理和数据挖掘提供基础。
-### 输入：
-已录制音频。
-### 输出：
-分词形式&完整句子形式，词&句置信息度词&句时间戳，词属性，多候选词，文法格式智能转换双发音人分离。
-### 接口简介：
-讯飞开放平台通过 REST API 的方式给开发者提供语音转写的 HTTP 接口，基于该接口，开发者可以获取开发平台的语音转写能力，方便开发者使用自己熟悉的编程语言快速集成。
-### 接口说明：转写 API 包括以下接口： 
-* 预处理 /prepare:
-* 文件分片上传 /upload:
-* 合并文件 /merge:
-* 查询处理进度 /getProgress:
-* 获取结果 /getResult:
 
 
-* 接口调用流程图：
-* ![image](https://i.imgur.com/15rsOhh.jpg)
+
+
+
 
 
 
