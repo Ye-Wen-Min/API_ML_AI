@@ -199,7 +199,7 @@ client.asr(get_file_content('audio.pcm'), 'pcm', 16000, {
 
 ### 百度AIP代码尝试输入以及输出
 * 首先，创建百度API应用。获取key。
-![image](https://github.com/Ye-Wen-Min/API_ML_AI/blob/master/img/yuyin2.jpg)
+![image](https://github.com/Ye-Wen-Min/API_ML_AI/blob/master/img/%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB1_%E5%89%AF%E6%9C%AC.png)
 
 * 准备对一段wav格式的语音文件进行识别处理。
 
