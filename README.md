@@ -110,7 +110,7 @@
 
 
 
-![img](https://github.com/Ye-Wen-Min/API_ML_AI/blob/master/%E7%95%8C%E9%9D%A2/%E4%BC%9A%E8%AE%AE%E8%AE%B0%E5%BD%95%E8%BD%AC%E5%8C%96%E9%A1%B5%E9%9D%A2.png))
+![img](https://github.com/Ye-Wen-Min/API_ML_AI/blob/master/%E7%95%8C%E9%9D%A2/%E4%BB%BB%E5%8A%A1%E5%88%97%E8%A1%A8.png))
 
 ## 任务列表
 * （1）新建任务可对任务进行编辑。
