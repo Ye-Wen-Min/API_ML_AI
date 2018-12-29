@@ -214,6 +214,7 @@ client.asr(get_file_content('audio.pcm'), 'pcm', 16000, {
 ### API代码使用比较分析：
 * [百度API](http://ai.baidu.com/)：SDK 文档齐全，准确性高，速度快。
 * [讯飞语音API](https://www.xfyun.cn/)：语音识别引擎较庞大，对中文的识别精度很高。
+* 因为该产品重心要在于实时会议记录翻译，需要即时的语音识别输出。根据识别速度这一特点，故选择识别速度较快的百度语音API。
 
 
 ### API使用风险性评估：
